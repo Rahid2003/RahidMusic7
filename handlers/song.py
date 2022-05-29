@@ -45,11 +45,11 @@ def bul(client, message):
 
     except Exception as e:
         m.edit(
-            "❌ Mahnı tapılmadı.\n\nBaşqa mahnı yazın, vəya mahnı adı düzgün deyil."
+            "❌ Mahnı tapılmadı.\n\nBaşqa mahnı yazın, və ya mahnı adı düzgün deyil."
         )
         print(str(e))
         return
-    m.edit("`Mahnı Yüklənir, Zəhmət olmasa gözləyin...⏱`")
+    m.edit("`Mahnı yüklənir, Zəhmət olmasa gözləyin...⏱`")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
