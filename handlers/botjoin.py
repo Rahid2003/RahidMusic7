@@ -24,7 +24,7 @@ async def addchannel(client, message):
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id,"Senin İsteğin Üzerine Geldim")
+        await USER.send_message(message.chat.id,"İstəyinizlə Gəldim")
     except UserAlreadyParticipant:
         await message.reply_text(
             "<b>Asistan onsuzda qrupda var🙄</b>",
@@ -33,8 +33,8 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🔵 Zaman Aşımı Hatası 🔵\n User {user.first_name} userbot için yoğun katılma istekleri nedeniyle grubunuza katılamadı! Asistanın grupta yasaklanmadığından emin olun."
-            "\n\n Yada Asistan Hesabını Qrupa özün əlavə et </b>",
+            f"<b>🔵 Zaman Aşımı Hatası 🔵\n User {user.first_name} Userbot çoxlu qoşulma sorğularına görə qrupunuza qoşula bilmədi! Köməkçinin qrupda qadağan edilmədiyinə əmin olun."
+            "\n\n vəya asistan hesabını qrupa özün əlavə et </b>",
         )
         return
     await message.reply_text(
