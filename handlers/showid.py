@@ -15,15 +15,15 @@ async def showid(client, message):
             quote=True
         )
 
-    elif chat_type in ["group", "supergroup"]:
+    elif chat_type in ["group", "Gencler_Mekani"]:
         _id = ""
         _id += (
-            "<b>Grubun Sohbet kimliği</b>: "
+            "<b>Qrupun Söhbət kimliyi</b>: "
             f"<code>{message.chat.id}</code>\n"
         )
         if message.reply_to_message:
             _id += (
-                "<b>Kullanıcının Kimlik bilgisi</b>: "
+                "<b>İstifadəçinin şəxsi məlumatı</b>: "
                 f"<code>{message.reply_to_message.from_user.id}</code>\n"
             )
             file_info = get_file_id(message.reply_to_message)
@@ -34,7 +34,7 @@ async def showid(client, message):
                 )
         else:
             _id += (
-                "<b>Kullanıcı Kimliği</b>: "
+                "<b>İstifadəçinin şəxsiyyəti</b>: "
                 f"<code>{message.from_user.id}</code>\n"
             )
             file_info = get_file_id(message)
